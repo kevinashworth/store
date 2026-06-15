@@ -1,11 +1,12 @@
 {
-    "files.associations": {
-        "*.html.erb": "erb"
-    },
-    "ruby.useLanguageServer": true,
     "[erb]": {
-        "editor.defaultFormatter": "marcoroth.herb-lsp",
-        "editor.formatOnSave": true
+        "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
     },
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp"
+    },
+    "editor.formatOnSave": true,
+    "rubyLsp.formatter": "auto",
+    "rubyLsp.useBundler": true,
     "vscode-erb-beautify.keepBlankLines": 1
 }

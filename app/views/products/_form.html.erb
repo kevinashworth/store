@@ -3,22 +3,27 @@
     <p class="error"><%= form.object.errors.full_messages.first %></p>
   <% end %>
 
-  <div>
+  <div style="margin: 1rem; padding: .5rem;">
     <%= form.label :name %><br>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :description, style: 'display: block;' %><br>
+  <div style="margin: 1rem; padding: .5rem;">
+    <%= form.label :description %><br>
     <%= form.rich_text_area :description %>
   </div>
 
-    <div>
-      <%= form.label :featured_image %><br>
-      <%= form.file_field :featured_image %>
-    </div>
+  <div style="margin: 1rem; padding: .5rem;">
+    <%= form.label :featured_image %><br>
+    <%= form.file_field :featured_image %>
+  </div>
 
-  <div>
+  <div style="margin: 1rem; padding: .5rem;">
+    <%= form.label :inventory_count %><br>
+    <%= form.number_field :inventory_count, min: 0 %>
+  </div>
+
+ <div style="margin: 1rem; padding: .5rem;">
     <%= form.submit %>
   </div>
 <% end %>

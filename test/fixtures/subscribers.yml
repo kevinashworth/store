@@ -2,8 +2,8 @@
 
 one:
   product: one
-  email: MyString
+  email: one@example.com
 
 two:
   product: two
-  email: MyString
+  email: two@example.com

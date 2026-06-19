@@ -2,12 +2,12 @@
 service: store
 
 # Name of the container image (use your-user/app-name on external registries).
-image: store
+image: kevinashworth/store
 
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 64.23.243.214
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -27,14 +27,14 @@ servers:
 # Where you keep your container images.
 registry:
   # Alternatives: hub.docker.com / registry.digitalocean.com / ghcr.io / ...
-  server: localhost:5555
+  server: hub.docker.com
 
   # Needed for authenticated registries.
-  # username: your-user
+  username: kevinashworth
 
   # Always use an access token rather than real password when possible.
-  # password:
-  #   - KAMAL_REGISTRY_PASSWORD
+  password:
+    - KAMAL_REGISTRY_PASSWORD
 
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
@@ -91,8 +91,9 @@ builder:
   #   - RAILS_MASTER_KEY
 
 # Use a different ssh user than root
-# ssh:
+ssh:
 #   user: app
+  keys: [ "~/.ssh/id_ed25519_digitalocean" ]
 
 # Use accessory services (secrets come from .kamal/secrets).
 # accessories:

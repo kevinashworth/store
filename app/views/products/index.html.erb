@@ -1,11 +1,13 @@
 <h1><%= t ".title" %></h1>
 
-<div id="products">
-  <% @products.each do |product| %>
-    <div>
-      <%= link_to product.name, product_path(product.id) %>
-    </div>
-  <% end %>
+<div style="display: flex; flex-direction: column; gap: 1rem; border: 1px solid lightgray; padding: 1rem; margin-top: 1rem;">
+  <div id="products">
+    <% @products.each do |product| %>
+      <div>
+        <%= link_to product.name, product_path(product.id) %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <%= link_to 'New Product', new_product_path if authenticated? %>

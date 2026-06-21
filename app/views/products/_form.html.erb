@@ -3,27 +3,29 @@
     <p class="error"><%= form.object.errors.full_messages.first %></p>
   <% end %>
 
-  <div style="margin: 1rem; padding: .5rem;">
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </div>
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col p-2 m-4 border border-gray-300">
+      <span class="font-bold"><%= form.label :name%></span><br>
+      <%= form.text_field :name %>
+    </div>
 
-  <div style="margin: 1rem; padding: .5rem;">
-    <%= form.label :description %><br>
-    <%= form.rich_text_area :description %>
-  </div>
+    <div class="flex flex-col gap-1 p-2 m-4 border border-gray-300">
+      <%= form.label :description, class: "font-bold" %><br>
+      <%= form.rich_text_area :description %>
+    </div>
 
-  <div style="margin: 1rem; padding: .5rem;">
-    <%= form.label :featured_image %><br>
-    <%= form.file_field :featured_image %>
-  </div>
+    <div class="flex flex-col gap-1 p-2 m-4 border border-gray-300">
+      <%= form.label :featured_image, style: "font-weight: bold;" %><br>
+      <%= form.file_field :featured_image %>
+    </div>
 
-  <div style="margin: 1rem; padding: .5rem;">
-    <%= form.label :inventory_count %><br>
-    <%= form.number_field :inventory_count, min: 0 %>
-  </div>
+    <div class="flex flex-col gap-1 p-2 m-4 border border-gray-300">
+      <%= form.label :inventory_count, class: "font-bold" %><br>
+      <%= form.number_field :inventory_count, min: 0 %>
+    </div>
 
-  <div style="margin: 1rem; padding: .5rem;">
-    <%= form.submit %>
+    <div class="flex flex-col gap-1 p-2 m-4 border border-gray-300">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

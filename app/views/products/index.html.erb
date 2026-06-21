@@ -10,5 +10,13 @@
   </div>
 </div>
 
-<%= link_to 'New Product', new_product_path if authenticated? %>
-<%= link_to "Login", new_session_path unless authenticated? %>
+<div style="display: flex; flex-direction: column; gap: 1rem; border: 1px solid lightgray; padding: 1rem; margin-top: 1rem;">
+  <%= link_to 'Add New Product', new_product_path if authenticated? %>
+  <%= link_to "Login", new_session_path unless authenticated? %>
+  <%= link_to "Sign Up [debug]", sign_up_path unless authenticated? %>
+  <div>
+    <b>User:</b>
+    <%= @user&.full_name || "[no full name]" %>
+  </div>
+  <%#= debug @user %>
+</div>

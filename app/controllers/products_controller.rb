@@ -3,7 +3,9 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
   def index
+    authenticated?  # ensure session is resumed from cookie
     @products = Product.all
+    @user = Current.user
   end
 
   def show

@@ -17,4 +17,5 @@
             "text": "Use conventional commit message format."
         }
     ],
+    "editor.wordWrap": "on",
 }

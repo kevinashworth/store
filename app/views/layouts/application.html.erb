@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en" class="bg-gray-100 font-serif text-gray-900">
   <head>
     <title><%= content_for(:title) || "Store" %></title>
 
@@ -31,8 +31,10 @@
     <div class="alert"><%= flash[:alert] %></div>
 
     <nav>
-      <%= link_to "Home", root_path %>
+      <%= link_to "Home", root_path if authenticated? %>
       <%= button_to "Log out", session_path, method: :delete, data: { turbo_confirm: "Are you sure?" } if authenticated? %>
+      <%= link_to "Sign In", new_session_path unless authenticated? %>
+      <%= link_to "Sign Up", sign_up_path unless authenticated? %>
     </nav>
 
     <main><%= yield %></main>

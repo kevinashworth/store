@@ -5,8 +5,16 @@
     "[ruby]": {
         "editor.defaultFormatter": "Shopify.ruby-lsp"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+    },
     "editor.formatOnSave": true,
     "rubyLsp.formatter": "auto",
-    "rubyLsp.useBundler": true,
-    "vscode-erb-beautify.keepBlankLines": 1
+    "vscode-erb-beautify.keepBlankLines": 1,
+    "yaml.format.enable": true,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use conventional commit message format."
+        }
+    ],
 }

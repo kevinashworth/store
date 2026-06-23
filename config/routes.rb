@@ -25,7 +25,9 @@ Rails.application.routes.draw do
 
   # "Settings" namespace to separate out user and store settings from rest of application
   namespace :settings do
-    resource :profile, only: [ :show ]
+    resource :profile, only: [ :show, :update ]
     resource :password, only: [ :show, :update ]
+
+    root to: redirect("/settings/profile")
   end
 end

@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   # "Settings" namespace to separate out user and store settings from rest of application
   namespace :settings do
+    resource :email, only: [ :show, :update ]
     resource :profile, only: [ :show, :update ]
     resource :password, only: [ :show, :update ]
     resource :user, only: [ :show, :destroy ]

@@ -30,5 +30,10 @@
 en:
   hello: "Hello world"
   products:
-      index:
-        title: "Products"
+    index:
+      title: "Products"
+
+  activerecord:
+    attributes:
+      user:
+        password_challenge: "Current password"

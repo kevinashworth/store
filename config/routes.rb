@@ -22,4 +22,10 @@ Rails.application.routes.draw do
   resource :unsubscribe, only: [ :show ]
 
   root "products#index"
+
+  # "Settings" namespace to separate out user and store settings from rest of application
+  namespace :settings do
+    resource :profile, only: [ :show ]
+    resource :password, only: [ :show, :update ]
+  end
 end

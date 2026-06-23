@@ -3,7 +3,7 @@ body {
   padding: 1rem;
 }
 
-nav {
+nav.app-navbar {
   align-items: center;
   display: flex;
   font-size: 0.875em;
@@ -11,10 +11,10 @@ nav {
   justify-content: flex-end;
   margin: 0 auto;
   max-width: 1024px;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
-nav a {
+nav.app-navbar a {
   display: inline-block;
 }
 
@@ -42,4 +42,17 @@ section.product img {
   border-radius: 8px;
   flex-basis: 50%;
   max-width: 50%;
+}
+
+section.settings {
+  display: flex;
+  gap: 1rem;
+}
+
+section.settings nav.settings-nav {
+  width: 200px;
+}
+
+section.settings nav .settings-nav a {
+  display: block;
 }

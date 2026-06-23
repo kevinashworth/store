@@ -26,8 +26,9 @@ servers:
 
 # Where you keep your container images.
 registry:
-  # Alternatives: hub.docker.com / registry.digitalocean.com / ghcr.io / ...
-  server: hub.docker.com
+  # For Docker Hub, omit `server` and Kamal will use Docker's default registry.
+  # For other registries, set server (e.g. registry.digitalocean.com or ghcr.io).
+  # server: ghcr.io
 
   # Needed for authenticated registries.
   username: kevinashworth
@@ -92,8 +93,8 @@ builder:
 
 # Use a different ssh user than root
 ssh:
-#   user: app
-  keys: [ "~/.ssh/id_ed25519_digitalocean" ]
+  #   user: app
+  keys: ["~/.ssh/id_ed25519_digitalocean"]
 
 # Use accessory services (secrets come from .kamal/secrets).
 # accessories:

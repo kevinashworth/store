@@ -12,4 +12,9 @@
     "rubyLsp.formatter": "auto",
     "vscode-erb-beautify.keepBlankLines": 1,
     "yaml.format.enable": true,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use conventional commit message format."
+        }
+    ],
 }

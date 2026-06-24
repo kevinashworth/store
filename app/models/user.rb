@@ -9,6 +9,14 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 8 }, allow_nil: true
   validates :email_address, presence: true, uniqueness: true
 
+  generates_token_for :email_confirmation, expires_in: 7.days do
+    unconfirmed_email
+  end
+
+  def confirm_email
+    update(email_address: unconfirmed_email, unconfirmed_email: nil)
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end

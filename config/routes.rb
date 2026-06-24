@@ -32,4 +32,8 @@ Rails.application.routes.draw do
 
     root to: redirect("/settings/profile")
   end
+
+  namespace :email do
+    resources :confirmations, param: :token, only: [ :show ]
+  end
 end
